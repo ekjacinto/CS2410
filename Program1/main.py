@@ -69,12 +69,16 @@ def main():
         print("File not found")
 
     print(fileContents_in_cm)
-    print(f"Highest Rainfall: {getHighestRainfall(rainfall_collections)} (in cm)")
-    print(f"Lowest Rainfall: {getLowestRainfall(rainfall_collections)} (in cm)")
+    print(
+        f"Highest Rainfall: {getHighestRainfall(rainfall_collections)[1]} cm in {getHighestRainfall(rainfall_collections)[0]}"
+    )
+    print(
+        f"Lowest Rainfall: {getLowestRainfall(rainfall_collections)[1]} cm in {getLowestRainfall(rainfall_collections)[0]}"
+    )
 
     # store mean rainfall in variable for use
     MEANRAINFALL = getMeanRainfall(rainfall_collections)
-    print(f"Mean Rainfall: {MEANRAINFALL} (in cm)")
+    print(f"Mean Rainfall: {MEANRAINFALL} cm")
     print(
         f"The total number of cities where rainfall is greater than the mean number of rainfall is: {getNumCitiesGreaterThanMean(rainfall_collections, MEANRAINFALL)} cities"
     )
